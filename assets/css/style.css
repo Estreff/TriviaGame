@@ -3,11 +3,67 @@ body {
 }
 
 .jumbotron {
-	margin-top: 20px;
+	/*margin: 20px;*/
 	text-align: center;
 }
 
 .jumbotron h1 {
 	font-size: 100px;
 	font-weight: bolder;
+}
+
+.pick {
+	display: block;
+}
+
+.mainContent {
+	padding: 0px, 0px, 0px, 0px;
+
+}
+
+.mainContent h3{
+	color: black;
+	font-size: 36px;
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+
+.sidebar {
+	background-color: lightgray;
+	padding: 0px;
+	margin:0;
+	border: 2px solid gray;
+	border-radius: 6px;
+	min-height: 200px;
+	color: gray;
+}
+
+.sidebar h1 {
+	font-size: 32px;
+}
+
+.sidebar p {
+	font-weight: bold;
+}
+
+#timer {
+	font-size: 50px;
+}
+
+li{
+	display:block;
+	font-size: 32px;
+}
+
+#question {
+	font-size: 32px;
+}
+
+#correct {
+	font-size: 72px;
+}
+
+#wrong {
+	font-size: 72px;
 }
