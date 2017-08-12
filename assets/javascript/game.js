@@ -64,7 +64,8 @@ $('li').click(function() {
 		correctAnswers ++;
 		$('#correct').html(correctAnswers);
 		$('#popup').css('visibility', 'visible')
-		$('#winLossComment').html('Congratulations, you selected the correct Answer');
+		$('#winLossComment').html('Congratulations, you selected the correct Answer!!!');
+		$('ul').addClass('disable');
 		timerStop();
 		displayWinningImage();
 		
@@ -72,8 +73,10 @@ $('li').click(function() {
 		incorrectAnswers ++;
 		$('#wrong').html(incorrectAnswers);
 		$('#popup').css('visibility', 'visible')
-		$('#winLossComment').html('Sorry, that answer is Incorrect<br />' + 'Correct Answer: ' + questions[questionsAnswered].correctAnswer);
+		$('#winLossComment').html('Sorry, that answer is Incorrect<br /><br />' + 'Correct Answer: ' + questions[questionsAnswered].correctAnswer);
+		$('ul').addClass('disable');
 		timerStop();
+		$('#winningImage').html("<img src=>").attr('class', 'img-responsive');
 	}
 });
 
@@ -101,7 +104,7 @@ $('li').click(function() {
 				incorrectAnswers ++;
 				$('#wrong').html(incorrectAnswers);
 				$('#popup').css('visibility', 'visible')
-				$('#winLossComment').html('Sorry, you took too mucch time!!!<br />' + 'Correct Answer: ' + questions[questionsAnswered].correctAnswer);
+				$('#winLossComment').html('Sorry, you took too much time!!!<br />' + 'Correct Answer: ' + questions[questionsAnswered].correctAnswer);
 				
 				clearInterval(intervalId);
 			}
@@ -110,35 +113,53 @@ $('li').click(function() {
 
 // Start Questions	
 	function startTest() {
+		$('#startGame').addClass('disable');
+		$('#resetGame').removeClass('disable');
+		$('ul').removeClass('disable');
 		questionSelect();
 		timer();
-		$('#startGame').attr("disabled", "true");
+		
 	}
 
 // On click of Start Game execute startTest
 		$('#startGame').click(startTest);
 
+
+
 // Reset Game function
 	function resetGame() {
-		var correctAnswers = 0;
-		$('#correct').html(0);
-		var incorrectAnswers = 0;
-		$('#wrong').html(0);
-		var counter = 15;
-		$('#timer').html(counter);
+		timerStop();
 
-		$('#questions').html("");
+		counter = 15;
+		correctAnswers = 0;
+		incorrectAnswers = 0;
+		questionsAnswered = 0;
+		console.log('Reset Game: ',questionsAnswered)
+		
+
+		$('#timer').html(counter).css({'color': 'black', 'font-weight': 'normal'});
+		$('#correct').html(correctAnswers);
+		$('#wrong').html(incorrectAnswers);
+
+		$('#question').html("");
+		$('#questionTitle').css({'min-height': '125px'});
+		$('#answerTitle').css({'min-height': '125px'});
 		$('#answer1').html("");
 		$('#answer2').html("");
 		$('#answer3').html("");
 		$('#answer4').html("");
+		$('li').css({'border':'none', 'background-color': 'lightgray', 'min-height': '0px'});
 
-		$('#startGame').attr("disabled", "false");
-		$('#resetGame').attr("disabled", "true");
-	}
+		$('#startGame').removeClass('disable');
+		$('#resetGame').addClass('disable');
+		$('#finalPopup').css('visibility','hidden');
+		$('#popup').css('visibility','hidden');
+
+	}	
 
 // Reset Button on right as well on final page.
 		$('#resetGame').click(resetGame);
+		$('#startOver').click(resetGame);
 
 	
 // Stop timer
@@ -159,9 +180,17 @@ $('li').click(function() {
 		totalQuestions()
 		if(questionsAnswered === questions.length) {
 			$('#finalPopup').css('visibility', 'visible');
-		} else {
+			if(incorrectAnswers === 0) {
+				$('#finalComment').html('You are a know it all!! <br /><br /> Total Questions: ' + questionsAnswered + '<br /> Correct Answers: ' + correctAnswers + '<br /> Incorrect Answers: ' + incorrectAnswers);
+			} else if (correctAnswers > incorrectAnswers) {
+				$('#finalComment').html('You have a higher than average knowledge of topic!! <br /><br /> Total Questions: ' + questionsAnswered + '<br /> Correct Answers: ' + correctAnswers + '<br /> Incorrect Answers: ' + incorrectAnswers);
+			} else {
+				$('#finalComment').html('Study Up, you have a lower than average knowledge of this topic!! <br /><br /> Total Questions: ' + questionsAnswered + '<br /> Correct Answers: ' + correctAnswers + '<br /> Incorrect Answers: ' + incorrectAnswers);
+			}
+		} else { 
 			$('#winningImage').html("<img src=" + "" + " width='70%'>").attr('class', 'img-responsive');
 			questionSelect();	
+			$('ul').removeClass('disable');
 			timer();
 		}
 	});
