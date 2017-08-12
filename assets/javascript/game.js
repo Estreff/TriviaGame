@@ -137,7 +137,7 @@ $('li').click(function() {
 		console.log('Reset Game: ',questionsAnswered)
 		
 
-		$('#timer').html(counter).css({'color': 'black', 'font-weight': 'normal'});
+		$('#timer').html(counter).css({'color': 'black', 'font-weight': 'normal', 'font-size': '50px'});
 		$('#correct').html(correctAnswers);
 		$('#wrong').html(incorrectAnswers);
 
@@ -176,6 +176,7 @@ $('li').click(function() {
 
 	var nextQuestion = $('#next').click(function() {
 		$('#popup').css('visibility', 'hidden');
+		$('#timer').html(counter).css({'color': 'black', 'font-weight': 'normal', 'font-size': '50px'});
 		
 		totalQuestions()
 		if(questionsAnswered === questions.length) {
