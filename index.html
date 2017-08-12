@@ -8,34 +8,61 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper container">
 		<div class="row">
-			<div class="col-md-12 jumbotron">
+			<div class="col-xl-12 col-md-12 jumbotron title">
 				<h1>Trivia Game</h1>
 			</div>
 		</div>
 		<div class=" mainContent jumbotron row">
 			<div class="sidebar col-md-3">
 				<div>
-					<h1>Time Remaining:</h1>
+					<h1>Time Remaining:</h1>			
+					<div  id = "timer">15</div>
 				</div>
-				<div  id = "timer">15</div>
+				<div>
+					<button class = "btn btn-danger" id = "startGame">Start Game</button>
+				</div>
 			</div>
 			<div class="col-md-6">
-				<div>
+				<div id="questionTitle">
 					<h3>Question</h3>
 					<div id="question"></div>
 				</div>
-				<div>
+
+				<div id = "answerTitle">
 					<h3>Answers</h3>
-					<ul id = "answers">
+					<ul id = answers>
 						<li id="answer1"></li>
 						<li id="answer2"></li>
 						<li id="answer3"></li>
 						<li id="answer4"></li>
 					</ul>
 				</div>	
+
+<!-- Pop Up Win or Lose -->
+					<div id="popup">
+						<span class="popuptext" id="myPopup"></span>
+							<div id="winLossComment"></div>
+							<div id = "winningImage">
+							</div>
+							<div id="buttons">
+		
+								<button class= "btn btn-danger" id="next">Next Question</button>
+							</div>
+					</div>
+					<div id="finalPopup">
+						<span class="popuptext" id="myPopup"></span>
+							<div id="finalComment">Test</div>
+							<div id = "winningImage">
+							</div>
+							<div id="buttons">
+		
+								<button class= "btn btn-danger finalResults" id="resetGame">Reset Game</button>
+							</div>
+					</div>
 			</div>
+			
 			<div class="sidebar col-md-3">
 				<div class="row"></div>
 					<div class = "col-md-6 col-xs-6">
@@ -46,10 +73,21 @@
 						<p>Wrong Answers:</p>
 						<p id="wrong">0</p>
 					</div>
+					<div>
+					<button class = "btn btn-danger resetButton" id = "resetGame">Reset Game</button>
+				</div>
 			</div>
 			
 		</div>
+
 		
+		
+	</div>
+
+
+
+	<div class="navbar-bottom">
+		&copy; 2017 Written and Coded by Erik Streff
 	</div>
 
 
