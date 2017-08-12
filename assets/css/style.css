@@ -46,7 +46,7 @@ html body {
 .sidebar {
 	background-color: lightgray;
 	padding: 0px;
-	margin:0;
+	margin-bottom: 20px;
 	border: 2px solid gray;
 	border-radius: 6px;
 	min-height: 270px;
@@ -68,24 +68,24 @@ html body {
 }
 
 .btn-danger{
-	margin:20px;
+	margin-top:20px;
 	width: 75%;
 	height: 60px;
 }
 
-#startGame {
+/*#startGame {
 	margin-top: 20px;
 	position: absolute;
 	bottom: 0px;
-	left: 15px;
+	left: 10%;
 }
 
 #resetGame {
 	margin-top: 20px;
 	position: absolute;
 	bottom: 0px;
-	left: 15px;
-}
+	left: 10%;
+}*/
 
 
 #questionTitle {
@@ -105,7 +105,6 @@ html body {
 
 #correct {
 	font-size: 72px;
-
 }
 
 #wrong {
@@ -119,6 +118,8 @@ html body {
 	margin:0;
 	padding: 0;
 	min-height: 125px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #answerTitle  li {	
@@ -138,7 +139,7 @@ html body {
 	background-color: white;
 	color: black;
 	cursor: pointer;
-	min-height: 320px;
+	min-height: 360px;
 	max-height: 720px;
 	width: 500px;
     position: absolute;
@@ -150,17 +151,33 @@ html body {
     z-index: 10;
 }
 
+/*#next {
+	margin-top: 20px;
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+}*/
+
 #winLossComment {
 	margin: 20px;
 }
 
 #finalComment {
 	margin: 20px;
+	left: -15px;
+}
+
+.footer {
+	position: relative;
 }
 
 .wrapper {
 	min-height: 100%
 
+}
+
+#winningImage img {
+	margin-bottom: 20px;
 }
 
 
@@ -192,3 +209,4 @@ html body {
 	pointer-events: none;
 	opacity:0.25;
 }
+

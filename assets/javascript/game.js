@@ -169,7 +169,7 @@ $('li').click(function() {
 
 // Display image if you select the correct answer
 	function displayWinningImage() {
-		$('#winningImage').html("<img src=" + questions[questionsAnswered].image + " width='70%'>").attr('class', 'img-responsive');
+		$('#winningImage').html("<img src=" + questions[questionsAnswered].image + " width = '70%'>").attr('class', 'img-responsive');
 	}	
 
 // Next Question button
@@ -188,7 +188,7 @@ $('li').click(function() {
 				$('#finalComment').html('Study Up, you have a lower than average knowledge of this topic!! <br /><br /> Total Questions: ' + questionsAnswered + '<br /> Correct Answers: ' + correctAnswers + '<br /> Incorrect Answers: ' + incorrectAnswers);
 			}
 		} else { 
-			$('#winningImage').html("<img src=" + "" + " width='70%'>").attr('class', 'img-responsive');
+			$('#winningImage').html("<img src=" + "" + " max-height='70%'>").attr('class', 'img-responsive');
 			questionSelect();	
 			$('ul').removeClass('disable');
 			timer();
