@@ -117,7 +117,7 @@ function questionSelect() {
 // Question will populate one into the Question field one at a time
 // Multiple choice answers in the Answer field for question answered
 // On Click of answer or Radio Buttons
-$('li').click(function() {
+$('li').click(function(event) {
 	guess = $(event.currentTarget).text();
 	if( guess === selectedAnswer) {
 		
@@ -146,7 +146,6 @@ $('li').click(function() {
 			displayWinningImage();
 			correctSound.play();
 			winningAudio();
-			// runAudio.play();
 			$('#next').html('See Results');
 			
 		}
@@ -222,8 +221,6 @@ $('li').click(function() {
 // On click of Start Game execute startTest
 		$('#startGame').click(startTest);
 
-
-
 // Reset Game function
 	function resetGame() {
 		timerStop();
@@ -254,14 +251,12 @@ $('li').click(function() {
 		$('#resetGame').addClass('disable');
 		$('#finalPopup').css('visibility','hidden');
 		$('#popup').css('visibility','hidden');
-
 	}	
 
 // Reset Button on right as well on final page.
 		$('#resetGame').click(resetGame);
 		$('#startOver').click(resetGame);
 
-	
 // Stop timer
 	function timerStop() {
 		clearInterval(intervalId);
@@ -301,8 +296,6 @@ $('li').click(function() {
 			runAudio.pause();
 			timer();
 		}
-	});
-
-	
+	});	
 });
 	
