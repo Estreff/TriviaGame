@@ -4,7 +4,7 @@
 
 html body {
  background-color: white;
- height: 100vh;
+ height: 90%;
 }
 
 .title {
@@ -42,6 +42,11 @@ html body {
 	text-decoration: underline;
 }
 
+#main a{
+	text-decoration: none;
+	color: white;
+
+}
 
 .sidebar {
 	background-color: lightgray;
@@ -180,6 +185,7 @@ html body {
 #winningImage img {
 	margin-bottom: 20px;
 	margin-top: 20px;
+	width: 70%;
 }
 
 
@@ -193,7 +199,7 @@ html body {
 	width: 540px;
     position: absolute;
     top: 0px;
-    left:0px;   
+    left:-5px;   
     font-size: 36px;
     text-align: center; 
     visibility:hidden;
@@ -215,4 +221,8 @@ html body {
 .btn {
 	font-size:24px;
 	font-weight: bold;
+}
+
+.footer h6{
+	font-size: 14px;
 }

@@ -5,16 +5,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/darkly/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-
 </head>
+
 <body>
+<!-- Wrap the entire page -->
 	<div class="wrapper container">
 		<div class="row">
 			<div class="col-xl-12 col-md-12 jumbotron title">
 				<h1>Trivia Game</h1>
 			</div>
 		</div>
-		<div class=" mainContent jumbotron row">
+		<div class=" mainContent jumbotron row" id = "main">
 			<div class="col-md-3">
 				<div class="sidebar">			
 					<div>
@@ -22,7 +23,7 @@
 						<div  id = "timer">15</div>
 					</div>
 					<div>
-						<button class = "btn btn-danger" id = "startGame">Start Game</button>
+						<button class = "btn btn-danger" id = "startGame"><a href="#main">Start Game</a></button>
 					</div>
 				</div>
 			</div>
@@ -42,7 +43,7 @@
 					</ul>
 				</div>	
 
-<!-- Pop Up Win or Lose -->
+				<!-- Pop Up Win or Lose -->
 					<div id="popup">
 						<span class="popuptext" id="myPopup"></span>
 							<div id="winLossComment"></div>
@@ -50,22 +51,18 @@
 		
 								<button class= "btn btn-danger" id="next">Next Question</button>
 							</div>
-							<div id = "winningImage"> 
-							</div>
-							
+							<div id = "winningImage"></div>
 					</div>
+				<!-- Results Popup  -->
 					<div id="finalPopup">
 						<span class="popuptext" id="myPopup"></span>
-							<div id="finalComment">Test</div>
-							<div id = "winningImage">
-							</div>
-							<div id="buttons">
-		
+							<div id="finalComment"></div>
+							<div id="buttons">		
 								<button class= "btn btn-danger finalResults" id="startOver">Reset Game</button>
 							</div>
 					</div>
+					
 			</div>
-
 			
 			<div class="col-md-3">
 				<div class="sidebar">
@@ -85,25 +82,14 @@
 				</div>
 			</div>
 		</div>
-			
-		
+				
 <!-- Footer -->
 		<div class="row">
 			<div class="col-xl-12 col-md-12 jumbotron footer">
 				<h6>&copy; 2017 Written and Coded by Erik Streff</h6>
 			</div>
-		</div>
-		
-		
-	
-		
+		</div>		
 	</div>
-
-
-
-	
-
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
