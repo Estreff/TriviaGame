@@ -9,7 +9,7 @@
 
 <body>
 <!-- Wrap the entire page -->
-	<div class="wrapper container">
+	<div class="wrapper container" id="topPage">
 		<div class="row">
 			<div class="col-xl-12 col-md-12 jumbotron title">
 				<h1>Trivia Game</h1>
@@ -58,7 +58,7 @@
 						<span class="popuptext" id="myPopup"></span>
 							<div id="finalComment"></div>
 							<div id="buttons">		
-								<button class= "btn btn-danger finalResults" id="startOver">Reset Game</button>
+								<button class= "btn btn-danger finalResults" id="startOver"><a href="#topPage">Reset Game</a></button>
 							</div>
 					</div>
 					
@@ -76,7 +76,8 @@
 							<p id="wrong">0</p>
 						</div>
 						<div>
-							<button class = "btn btn-danger resetButton" id = "resetGame">Reset Game</button>
+							<button class = "btn btn-danger resetButton" id = "resetGame"><a href="#topPage">Reset Game</a> 
+							</button>
 						</div>
 					</div>
 				</div>
