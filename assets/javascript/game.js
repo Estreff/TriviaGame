@@ -7,7 +7,7 @@ var questions = [
 		answers:["Walk like an Eqyptian", "Human", "Amanda", "Sledgehammer"],
 		correctAnswer:"Walk like an Eqyptian",
 		image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1nbQ4GsLxbVnUNmORJkBsUJjM8hhRL5Z6KZScImUXngSE0ca5",
-		audio: "assets/sounds/Egyptian.mp3" 
+		audio: "assets/sounds/Walk_like_An_Egyptian.mp3" 
 	},
 
 	{
