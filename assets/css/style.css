@@ -98,6 +98,8 @@ html body {
 	color: black;
 }
 
+
+
 #correct {
 	font-size: 72px;
 }
@@ -146,13 +148,6 @@ html body {
     z-index: 10;
 }
 
-/*#next {
-	margin-top: 20px;
-	position: absolute;
-	bottom: 0px;
-	left: 40px;
-}*/
-
 #winLossComment {
 	margin: 20px;
 }
@@ -172,7 +167,6 @@ html body {
 	width: 70%;
 }
 
-
 #finalPopup {
 	border: 10px ridge lightgray;
 	border-radius: 10px;
@@ -190,13 +184,6 @@ html body {
     z-index: 10;
 }
 
-/*.finalResults {
-	width:480px;
-	position: absolute;
-	bottom:0px;
-	left:0px;
-}*/
-
 .disable {
 	pointer-events: none;
 	opacity:0.25;
@@ -209,4 +196,14 @@ html body {
 
 .footer h6{
 	font-size: 14px;
+}
+
+.scoring1 {
+	font-size: 20x;
+	padding-left: 10px; 		;	
+}
+
+.scoring2 {
+	font-size: 20x;
+	padding-right: 10px; 	
 }
